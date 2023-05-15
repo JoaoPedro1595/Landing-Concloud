@@ -1,0 +1,441 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./components/javascript/main.js"></script>
+    <title>Concloud</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        overflow-x: hidden;
+        /* border: dotted red; */
+    }
+
+    @font-face {
+        font-family: fonte-bold;
+        src: url(./components/fonts/Epilogue-Bold.ttf);
+    }
+    @font-face {
+        font-family: fonte-regular;
+        src: url(./components/fonts/Epilogue-Light.ttf);
+    }
+
+    .backgroundTopLanding{
+        background-image: url(./components/imgs/Topo.jpg);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .textoTopoLanding{
+        margin-left: 3rem;
+        
+    }
+
+    .textoTopoLanding h1{
+        font-size: 3rem;
+        font-family: fonte-bold;
+        color: white;
+    }
+
+    .textoTopoLanding p{
+        font-size: 2rem;
+        font-family: fonte-regular;
+        color: white;
+    }
+
+    .etapasLanding{
+        height: 75vh;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .etapasLanding h1{
+        font-family: fonte-bold;
+    }
+
+    .etapasLanding p{
+        font-family: fonte-regular;
+    }
+
+    .textosEtapasLanding{
+        margin-top: 3rem ;
+        margin-bottom: 5rem;
+        width: 75%;
+        height: 8rem;
+        overflow-y: hidden;
+    }
+
+    .textosEtapasLanding h1{
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .textosEtapasLanding p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .circulosEtapas{
+        display: flex;
+        justify-content: center;
+    }
+
+    .circulosEtapas p{
+        margin-top: 1.3rem;
+        text-align: center;
+    }
+
+    .circulo1{
+        height: 9rem;
+        width: 9rem;
+        margin-left: 3.2rem;
+        background-color: #752995;
+        border-radius: 50%;
+    }
+
+    .circulo2{
+        height: 9rem;
+        width: 9rem;
+        margin-left: 3.2rem;
+        background-color: #FFAD29;
+        border-radius: 50%;
+    }
+
+    .circulo1Etapas{
+        align-items: center;
+        margin: 2rem;
+        margin-top: 0;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .divExplicacao{
+        height: 140vh; 
+        background-color: rgb(228, 228, 228);
+    }
+
+    .textoTopExplicacao{
+        width: 100vw;
+        margin-top: 4rem;
+    }
+
+    .textoTopExplicacao h1{
+        text-align: center;
+        font-family: Fonte-Bold;
+        font-size: 5rem;
+    }
+
+    .circuloTeste{
+        margin-top: 4rem;
+        height: 24rem;
+        width: 24rem;
+        margin-left: 3.2rem;
+        background-color: #FFAD29;
+        border-radius: 50%;
+    }
+
+    .explicacaoParte1{
+        width: 100vw;
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textoExplicaçaoParte1{
+        width: 40vw;
+        margin-right: 8rem;
+
+    }
+
+    .textoExplicaçaoParte1 h1{
+        font-family: Fonte-Bold;
+        font-size: 5rem;
+    }
+
+    .textoExplicaçaoParte1 p{
+        margin-top: 1rem;
+        font-family: Fonte-regular;
+        font-size: 1.5rem;
+    }
+
+    .circuloTeste2{
+        margin-top: 4rem;
+        margin-bottom: 0;
+        height: 24rem;
+        width: 24rem;
+        margin-left: 3.2rem;
+        background-color: #752995;
+        border-radius: 50%;
+    }
+
+    .explicacaoParte2{
+        width: 100vw;
+        margin-top: 5rem;
+        flex-direction: row-reverse;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textoExplicaçaoParte2{
+        width: 40vw;
+        margin-left: 16rem;
+
+    }
+
+    .textoExplicaçaoParte2 h1{
+        font-family: Fonte-Bold;
+        font-size: 5rem;
+    }
+
+    .textoExplicaçaoParte2 p{
+        margin-top: 1rem;
+        font-family: Fonte-regular;
+        font-size: 1.5rem;
+    }
+
+    .divFacilite{
+        height: 130vh;
+        background-color:#FFAD29;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .textosFacilite{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textosFacilite h1{
+        margin: 6rem;
+        margin-top: 8rem;
+        margin-bottom: 0;
+        font-family: Fonte-Bold;
+        color: #752995;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .textosFacilite p{
+        margin: 15rem;
+        margin-top: 2rem;
+        font-family: Fonte-Regular;
+        color: white;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .footer{
+        height: 80vh;
+        color: lightgray;
+        display: flex;
+        font-family: Fonte-Regular;
+        flex-direction: row;
+        
+    }
+
+    .divEmail{
+        color: gray;
+        font-size: 2rem;
+        margin-left: 8rem;
+        margin-top: 4rem;
+    }
+
+    .divEmail p{
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 1500px) {
+        .divExplicacao{
+            height: 170vh;
+        }
+    }
+
+    .divTelefone{
+        font-family: Fonte-Bold;
+        color: black;
+        font-size: 2.5rem;
+        margin-top: 8rem;
+        margin-left: 18rem;
+    }
+
+    #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        background: transparent;
+        padding: 20px;
+        padding-left: 0;
+        padding-top: 10px;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    #header:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(163,35,147,1) 0%, rgba(117,41,149,1) 75%);
+
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: -1;
+    }
+
+    #header.scrolled:before {
+        opacity: 1;
+    }
+
+    #header img{
+        height: 5rem;
+        padding-top: 1.3rem;
+        padding-left: 1.2rem;
+        width: fit-content;
+        margin: 0;
+        margin-bottom: .5rem;
+    }
+
+    .linksHeader{
+        position: absolute;
+        right: 100;
+        margin-top: 1rem;
+    }
+
+    .linksHeader a{
+        color: white;
+        font-family: fonte-regular;
+        
+        margin-left: 4rem;
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+
+
+    
+</style>
+<body>
+    <div class="original" id="header">
+        <img src="./components/imgs/CONCLOUD MARCA - FINAL_APLICAÇÃO 03 - HORIZONTAL.png" alt="" srcset="">
+        <div class="linksHeader">
+            <a href="http://ec2-18-228-195-5.sa-east-1.compute.amazonaws.com:3000/Login"> Login </a>
+            <a href="http://ec2-18-228-195-5.sa-east-1.compute.amazonaws.com:3000/Registrar">Registrar-se</a>
+        </div>
+    </div>
+    <div class="backgroundTopLanding">
+        <div class="textoTopoLanding">
+            <h1>
+                <span style="color: #FFAD29;">Concloud.</span> A contabilidade especializada em MEI e ME
+                
+            </h1>
+            <p>
+                Cuidamos da contabilidade da sua empresa de forma ágil, fácil e simples. <br> Tudo de forma online
+                e sem burocracia.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="etapasLanding">
+        <div class="textosEtapasLanding">
+            <h1>Veja como é fácil de usar</h1>
+            <p>
+                Toda empresa independente do tamanho, precisa de um contador, por isso, somos especializados
+                em atender sua empresa e facilitar a sua vida
+            </p>
+        </div>
+        <div class="circulosEtapas">
+            <div class="circulo1Etapas">
+                <div class="circulo1"></div>
+                <p>Inicie o cadastro que iremos entrar em contato o mais breve prossivel</p>
+            </div>
+            <div class="circulo1Etapas">
+                <div class="circulo2"></div>
+                <p>Iremos formalizar nossa parceria e contratação do plano durante o cadastro</p>
+            </div>
+            <div class="circulo1Etapas">
+                <div class="circulo1"></div>
+                <p>Durante nosso contato aproveite para esclarecer suas dúvidas.</p>
+            </div>
+            <div class="circulo1Etapas">
+                <div class="circulo2"></div>
+                <p>Pronto! Agora sua empresa terá a contabilidade em dia.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="divExplicacao">
+        <div class="textoTopExplicacao">
+            <h1>Como irá funcionar</h1>
+        </div>
+
+        <div class="explicacaoParte1">
+            <div class="textoExplicaçaoParte1">
+                <h1>Você Precisará fazer</h1>
+                <p>
+                    Terá que emitir suas notas fiscais e nos enviar mensalmente seu extrato bancario
+                    <br>
+                    <br>
+                    Além de ter suporte online para dúvidas e esclarecimentos com o nosso time.
+                    Agora deixa com a gente e foque no seu trabalho, da contabilidade nós cuidamos para você
+                </p>
+            </div>
+            <div class="circuloTeste"></div>
+        </div>
+
+        <div class="explicacaoParte2">
+            <div class="textoExplicaçaoParte2">
+                <h1>Nós iremos fazer por você</h1>
+                <p>
+                    Tomaremos conta da sua contabilidade completa, deixaremos sua empresa legalizada junto
+                    ao governo, seja através dos relatórios contábeis, imposto de renda, calcular as guias de imposto,
+                    folha de pagamento e pró-labore. Você terá acesso aos nossos especialistas sempre que precisar.
+                    
+                </p>
+            </div>
+            <div class="circuloTeste2"></div>
+        </div>
+    </div>
+    <div class="divFacilite">
+        <div class="textosFacilite">
+
+            <h1>
+                Facilite a sua vida e ganhe tempo para a sua empresa
+            </h1>
+            <p>
+                <span style="color: #752995;">Concloud.</span> A contabilidade especializada para cuidar da sua empresa
+            </p>
+        </div>
+        <!-- Reservado imagens -->
+    </div>
+    <div class="footer">
+        <div class="divEmail">
+            <p>Contato</p>
+            <p>atendimento@osc.com.br</p>
+        </div>
+        <div class="divTelefone">
+            <h1>
+                <span style="color: #FFAD29;">+18</span> 3322 9999
+            </h1>
+        </div>
+    </div>
+
+
+</body>
+</html>
