@@ -3,7 +3,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./components/javascript/main.js"></script>
+    <script>
+
+        window.addEventListener('scroll', function() {
+            var myDiv = document.getElementById('header');
+            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            
+            if (scrollPosition > 700) {
+            myDiv.classList.add('scrolled');
+            myDiv.classList.remove('original');
+            } else {
+            myDiv.classList.remove('scrolled');
+            myDiv.classList.add('original');
+            }
+        });
+
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;700&display=swap" rel="stylesheet">
     <title>Concloud</title>
 </head>
 <style>
@@ -23,7 +41,7 @@
     }
 
     .backgroundTopLanding{
-        background-image: url(./components/imgs/Topo.jpg);
+        background-image: url('https://i.ibb.co/0KB07GP/Topo.jpg');
         height: 100vh;
         width: 100vw;
         display: flex;
@@ -37,13 +55,13 @@
 
     .textoTopoLanding h1{
         font-size: 3rem;
-        font-family: fonte-bold;
+        font-family: 'Epilogue', sans-serif;
         color: white;
     }
 
     .textoTopoLanding p{
         font-size: 2rem;
-        font-family: fonte-regular;
+        font-family: 'Epilogue', sans-serif;
         color: white;
     }
 
@@ -56,11 +74,11 @@
     }
 
     .etapasLanding h1{
-        font-family: fonte-bold;
+        font-family: 'Epilogue', sans-serif;
     }
 
     .etapasLanding p{
-        font-family: fonte-regular;
+        font-family: 'Epilogue', sans-serif;
     }
 
     .textosEtapasLanding{
@@ -128,7 +146,7 @@
 
     .textoTopExplicacao h1{
         text-align: center;
-        font-family: Fonte-Bold;
+        font-family: 'Epilogue', sans-serif;
         font-size: 5rem;
     }
 
@@ -156,13 +174,13 @@
     }
 
     .textoExplicaçaoParte1 h1{
-        font-family: Fonte-Bold;
+        font-family: 'Epilogue', sans-serif;
         font-size: 5rem;
     }
 
     .textoExplicaçaoParte1 p{
         margin-top: 1rem;
-        font-family: Fonte-regular;
+        font-family: 'Epilogue', sans-serif;
         font-size: 1.5rem;
     }
 
@@ -192,13 +210,13 @@
     }
 
     .textoExplicaçaoParte2 h1{
-        font-family: Fonte-Bold;
+        font-family: 'Epilogue', sans-serif;
         font-size: 5rem;
     }
 
     .textoExplicaçaoParte2 p{
         margin-top: 1rem;
-        font-family: Fonte-regular;
+        font-family: 'Epilogue', sans-serif;
         font-size: 1.5rem;
     }
 
@@ -219,7 +237,7 @@
         margin: 6rem;
         margin-top: 8rem;
         margin-bottom: 0;
-        font-family: Fonte-Bold;
+        font-family: 'Epilogue', sans-serif;
         color: #752995;
         text-align: center;
         font-size: 4rem;
@@ -228,7 +246,7 @@
     .textosFacilite p{
         margin: 15rem;
         margin-top: 2rem;
-        font-family: Fonte-Regular;
+        font-family: 'Epilogue', sans-serif;
         color: white;
         text-align: center;
         font-size: 2.5rem;
@@ -238,7 +256,7 @@
         height: 80vh;
         color: lightgray;
         display: flex;
-        font-family: Fonte-Regular;
+        font-family: 'Epilogue', sans-serif;
         flex-direction: row;
         
     }
@@ -261,7 +279,7 @@
     }
 
     .divTelefone{
-        font-family: Fonte-Bold;
+        font-family: 'Epilogue', sans-serif;
         color: black;
         font-size: 2.5rem;
         margin-top: 8rem;
@@ -320,7 +338,7 @@
 
     .linksHeader a{
         color: white;
-        font-family: fonte-regular;
+        font-family: 'Epilogue', sans-serif;
         
         margin-left: 4rem;
         font-size: 1.3rem;
@@ -332,7 +350,7 @@
 </style>
 <body>
     <div class="original" id="header">
-        <img src="./components/imgs/CONCLOUD MARCA - FINAL_APLICAÇÃO 03 - HORIZONTAL.png" alt="" srcset="">
+        <img src="https://i.ibb.co/PrXjKd1/CONCLOUD-MARCA-FINAL-APLICAC-A-O-03-HORIZONTAL.png" alt="" srcset="">
         <div class="linksHeader">
             <a href="http://ec2-18-228-195-5.sa-east-1.compute.amazonaws.com:3000/Login"> Login </a>
             <a href="http://ec2-18-228-195-5.sa-east-1.compute.amazonaws.com:3000/Registrar">Registrar-se</a>
